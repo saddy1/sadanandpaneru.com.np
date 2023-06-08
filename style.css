@@ -1,3 +1,50 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+  /* font family from google imported  */
+
+*{
+    margin: 0;  /* To Reduce the gap betweenb all the list that we have made*/
+    padding: 0;
+}
+
+.container{
+    display: flex; /*For Showing Side BY Side Content of container */
+    }
+
 .sidebar{
-    background-color: red;
+    background-color: rgb(151, 79, 148);
+    width: 20vw; /* it occupy the 20% of window to display the sidebar out of 100%*/
+    font-family: 'Roboto', sans-serif;
+}
+.sidebar nav{
+    padding: 8px;
+    font-size: 18px;
+    height: 100vh;
+}
+.sidebar li{
+    list-style: none;
+    padding: 28px;
+}
+.main{
+    background-color: rgb(49, 120, 141);
+    width: 80vw;
+}
+.infoContainer{
+    margin: auto;
+    background-color: rgb(49, 120, 141);
+    height: 15vw;
+    width: 70vw;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between; /* Creating space between .devinfo class and .devimg img*/
+}
+.devinfo{
+    padding: -4px;
+    color: blanchedalmond;
+    font-size: 26px;
+}
+.devimg img{
+    width: 237px;   /* Setting up the width of the image as our required */
+    border-style: dotted;
+
 }
