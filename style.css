@@ -65,6 +65,7 @@
     margin-top: 30px;
 }
 .button.button{
+    padding: auto;
 }
 .devimg img{
     width: 237px;   /* Setting up the width of the image as our required */
