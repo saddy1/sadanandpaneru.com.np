@@ -36,7 +36,7 @@
     /* background-color: rgb(15, 153, 158); */
     height: 15vw;
     width: 70vw;
-    margin-top: 25px;
+    margin-top: 115px;
     display: flex;
     justify-content: space-between; /* Creating space between .devinfo class and .devimg img*/
 }
