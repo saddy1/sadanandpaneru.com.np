@@ -61,10 +61,10 @@
 }
 
 .button{
-    display: flex;
-    justify-content: center;
-    background: unset;
-    margin-left: 395px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.button.button{
 }
 .devimg img{
     width: 237px;   /* Setting up the width of the image as our required */
