@@ -1,5 +1,7 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;1,100;1,200&display=swap');
   /* font family from google imported  */
 
 *{
@@ -12,8 +14,8 @@
     }
 
 .sidebar{
-    background-color: rgb(151, 79, 148);
-    width: 20vw; /* it occupy the 20% of window to display the sidebar out of 100%*/
+    background-color: rgb(167, 154, 166);
+    width: 10vw; /* it occupy the 20% of window to display the sidebar out of 100%*/
     font-family: 'Roboto', sans-serif;
 }
 .sidebar nav{
@@ -26,12 +28,12 @@
     padding: 28px;
 }
 .main{
-    background-color: rgb(49, 120, 141);
+    /* background-color: rgb(49, 120, 141); */
     width: 80vw;
 }
 .infoContainer{
     margin: auto;
-    background-color: rgb(49, 120, 141);
+    /* background-color: rgb(15, 153, 158); */
     height: 15vw;
     width: 70vw;
     margin-top: 25px;
@@ -39,12 +41,33 @@
     justify-content: space-between; /* Creating space between .devinfo class and .devimg img*/
 }
 .devinfo{
-    padding: -4px;
-    color: blanchedalmond;
-    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hello{
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.name{
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about{
+    font-size: 50px;
+    font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    background: unset;
+    margin-left: 395px;
 }
 .devimg img{
     width: 237px;   /* Setting up the width of the image as our required */
-    border-style: dotted;
+   
 
 }
