@@ -185,7 +185,7 @@ header .navbar ul li a:hover {
   flex-wrap: wrap;
   gap: 1.5rem;
   height: 107.5vh;
-  margin-top: -50px;
+  /* margin-top: 10px; */
   align-items: center;}
 
 .home #particles-js {
