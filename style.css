@@ -14,7 +14,7 @@
     }
 
 .sidebar{
-    background-color: rgb(167, 154, 166);
+    background-color: rgb(230, 204, 227);
     width: 10vw; /* it occupy the 20% of window to display the sidebar out of 100%*/
     font-family: 'Roboto', sans-serif;
 }

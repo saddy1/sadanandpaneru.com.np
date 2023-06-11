@@ -70,7 +70,7 @@ header {
   justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
-  background:#99f7e9;
+  background:#000000;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
@@ -90,7 +90,7 @@ header .logo {
   font-size: 2.5rem;
   font-weight: 800;
   text-decoration: none;
-  color: #0c0c0c;
+  color: #ffffff;
 }
 header .logo i {
   font-size: 2.2rem;
@@ -109,7 +109,7 @@ header .navbar li {
 }
 header .navbar ul li a {
   font-size: 1.57rem;
-  color: #0e2431;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.04rem;
@@ -117,8 +117,8 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #011aff;
-  border-bottom: 0.2rem solid #011aff;
+  color: #a6ff00;
+  border-bottom: 0.2rem solid #ff0000;
   padding: 0.5rem 0;
 }
 /* navbar ends */
@@ -383,15 +383,16 @@ header .navbar ul li a:hover {
 }
 .about .row .content h3 {
   color: rgb(27, 27, 27);
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .about .row .content .tag {
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: #020133;
-  font-weight: 600;
+  font-weight: 1000;
   margin-top: 1rem;
 }
 .about .row .content p {
+  font-size: 2rem;
   font-size: 1.5rem;
   margin-top: 1.5rem;
   font-family: "Nunito";
@@ -538,16 +539,16 @@ header .navbar ul li a:hover {
 
 /* education section starts */
 .education {
-  background: #e5ecfb;
+  background: linear-gradient(to bottom, #9f6fff, #e6e3cc);
   min-height: 80vh;
 }
-.education .qoute {
+/* .education .qoute {
   font-size: 1.5rem;
   text-align: center;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   margin-top: 0.5rem;
-}
+} */
 .education .box-container {
   display: flex;
   flex-wrap: wrap;
@@ -558,22 +559,22 @@ header .navbar ul li a:hover {
 .education .box-container .box {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  border-radius: 0.5rem;
-  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  width: 90%;
+  border-radius: 3rem;
+  box-shadow: 0.2rem 0.5rem 1rem rgba(129, 16, 16, 0.2);
   text-align: center;
   position: relative;
-  margin-top: 2rem;
+  margin-top: 3rem;
   overflow: hidden;
-  transition: 0.3s;
-  background: rgb(252, 252, 252);
+  transition: 0.1s;
+  background: rgb(255, 255, 255);
 }
 .education .box-container .box:hover {
-  transform: scale(1.03);
+  transform: scale(1);
   box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
 }
 .education .box-container .box .image {
-  flex: 1 1 20rem;
+  flex: 1 1 25rem;
   width: 100%;
 }
 .education .box-container .box img {
@@ -588,11 +589,11 @@ header .navbar ul li a:hover {
   flex-direction: column;
   padding: 1rem;
   flex-wrap: wrap;
-  flex: 1 1 70rem;
+  flex: 1 1 75rem;
 }
 .education .box-container .box .content h3 {
   font-size: 2.5rem;
-  color: #012970;
+  color: #450663;
   padding: 0.5rem 0;
   font-weight: 600;
   text-align: left;
