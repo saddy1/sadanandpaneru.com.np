@@ -1,322 +1,1331 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords"content="Sadanand Paneru, Robotics Enthusiasm, portfolio design, portfolio website, personal portfolio" />
-  <meta name="description" content="Welcome Learner to your learning platform." />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Favicon -->
-  <link id='favicon' rel="shortcut icon" href="title.png" type="image/x-png">
-  <title>Sadanand Paneru</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadanand Paneru - Electronics & Robotics Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af',
+                        accent: '#f59e0b',
+                        dark: '#0f172a',
+                        'dark-light': '#1e293b'
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-left': 'fadeInLeft 0.6s ease-out',
+                        'fade-in-right': 'fadeInRight 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .typing-animation::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transform-origin: left;
+            z-index: 9999;
+        }
+    </style>
 </head>
+<body class="bg-slate-900 text-white font-sans overflow-x-hidden">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scrollProgress"></div>
 
-<body oncontextmenu="return false">
-
-  <!-- pre loader -->
-  <!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
-
-  <!-- navbar starts -->
-  <header>
-    <a href="./" class="logo"><i class="fas fa-user-alt"></i> Sadanand Paneru</a>
-
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold gradient-text">
+                    <i class="fas fa-code mr-2"></i>Sadanand
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-400 transition-colors duration-300 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors duration-300 relative group">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#skills" class="hover:text-blue-400 transition-colors duration-300 relative group">
+                        Skills
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#education" class="hover:text-blue-400 transition-colors duration-300 relative group">
+                        Education
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors duration-300 relative group">
+                        Projects
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#experience" class="hover:text-blue-400 transition-colors duration-300 relative group">
+                        Experience
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+                <button class="md:hidden text-2xl" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden glass-effect hidden" id="mobileMenu">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#home" class="block hover:text-blue-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="block hover:text-blue-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="block hover:text-blue-400 transition-colors duration-300">Skills</a>
+                <a href="#education" class="block hover:text-blue-400 transition-colors duration-300">Education</a>
+                <a href="#projects" class="block hover:text-blue-400 transition-colors duration-300">Projects</a>
+                <a href="#experience" class="block hover:text-blue-400 transition-colors duration-300">Experience</a>
+            </div>
+        </div>
     </nav>
-  </header>
-  <!-- navbar ends -->
 
-
-
-  <!-- hero section starts -->
-  <section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-      <h2><br /> I am Sadanand Paneru</h2>
-      <p>I Am At <span class="typing-text"></span></p>
-      <a href="#about" class="btn"><span>About Me</span>
-        <i class="fas fa-arrow-circle-down"></i>
-      </a>
-      <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/sadanand-paneru-0114181b9/"
-              target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" aria-label="GitHub" href="https://github.com/saddy1" target="_blank"><i
-                class="fab fa-github"></i></a></li>
-          <li><a class="twitter" aria-label="Twitter" href="#" target="_blank"><i
-                class="fab fa-twitter"></i></a></li>
-          <li><a class="facebook" aria-label="Facebook" href="https://www.facebook.com/saddy.paneru" target="_blank"><i
-              class="fab fa-facebook"></i></a></li>
-          <li><a class="researchGate" aria-label="ResearchGate" href="https://www.researchgate.net/profile/Sadanand-Paneru" target="_blank"><i
-              class="fab fa-researchgate"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="image">
-      <img draggable="false" src="photo.png" alt="">
-    </div>
-  </section>
-  <!-- hero section ends -->
-
-
-  <!-- about section starts -->
-  <section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-
-    <div class="row">
-      <div class="content">
-        <h3>Publication</h3>
-        <span class="tag"><h5>1. Analytical and Experimental Approach for Modeling, Simulation and Validation of Two-Wheeled Self-Balancing Robot
-      G Baskota, R Devkota, S Paneru,... - 2023 ICICT, IEEE.</h5><br>
-<h5>2. Mapping and Localization of Mobile Robot with Monocular Camera Using VSLAM
-      S Paneru, S Yadav,... - 2023 ICT, ICTAES.</h5></span>
-        <br>
-        <h3>I'm Sadanand Paneru</h3>
-        <span class="tag">Electronics, Communication and Information Engineer</span>
-
-        <p>I hold the position of an IT Specialist at IOE Purwanchal Campus Dharan, where I contribute my expertise
-          in the field. I completed my graduation from the same campus, specializing in Electronic, Communication, and
-          Information Engineering. Alongside my current role, I also serve as the Head of PR and Marketing at Pi
-          Innovation Pvt. Ltd., where I actively engage in promoting and positioning our brand in the market.
-          Furthermore, I am driven by a strong passion to continuously improve my coding skills and nurture my
-          enthusiasm for robotics.</p>
-
-        <div class="box-container">
-          <!-- <div class="box">
-              <p><span> age: </span> 20</p>
-              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
-            </div> -->
-          <div class="box">
-            <p><span> Email : </span> <a href = "mailto:sadanand@ioepc.edu.np?subject = Request to Contact&body = ">
-              sadanand@ioepc.edu.np
-              </a></p>
-            <p><span> Address : </span> Dharan, Nepal</p>
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
         </div>
-
-        <div class="resumebtn">
-          <a href="https://drive.google.com/file/d/1IUjk3DCn6Z_hppqneSrp5CwfS6PBTUzy/view" target="_blank"
-            class="btn"><span>Resume</span>
-            <i class="fas fa-chevron-right"></i>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left animate-fade-in-left">
+                <div class="text-blue-400 text-lg mb-4 font-medium">
+                    <i class="fas fa-wave-square mr-2"></i>Hello, I'm
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold mb-6 gradient-text">
+                    Sadanand Paneru
+                </h1>
+                <div class="text-2xl lg:text-3xl text-gray-300 mb-6">
+                    <span>I'm a </span>
+                    <span class="text-blue-400 font-semibold typing-animation" id="typingText">Electronics Engineer</span>
+                </div>
+                <p class="text-lg text-gray-400 mb-8 max-w-2xl">
+                    Passionate Electronics, Communication and Information Engineer specializing in robotics, 
+                    IoT solutions, and innovative technology development. Currently serving as IT Officer at IOE Purwanchal Campus.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#about" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center">
+                        <span>Explore My Work</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1IUjk3DCn6Z_hppqneSrp5CwfS6PBTUzy/view" target="_blank" 
+                       class="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center">
+                        <i class="fas fa-download mr-2"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex gap-4 mt-8 justify-center lg:justify-start">
+                    <a href="https://www.linkedin.com/in/sadanand-paneru-0114181b9/" target="_blank" 
+                       class="w-12 h-12 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/saddy1" target="_blank" 
+                       class="w-12 h-12 bg-slate-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/saddy.paneru" target="_blank" 
+                       class="w-12 h-12 bg-slate-800 hover:bg-blue-800 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Sadanand-Paneru" target="_blank" 
+                       class="w-12 h-12 bg-slate-800 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fab fa-researchgate text-xl"></i>
+                    </a>
+                    <a href="mailto:sadanand@ioepc.edu.np" 
+                       class="w-12 h-12 bg-slate-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
             
-          </a>
+            <div class="flex justify-center animate-fade-in-right">
+                <div class="relative">
+                    <div class="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1 animate-pulse-slow">
+                        <img src="/api/placeholder/400/400" alt="Sadanand Paneru" 
+                             class="w-full h-full rounded-full object-cover bg-slate-800">
+                    </div>
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center animate-float">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center animate-float" style="animation-delay: 1s;">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-2xl text-blue-400">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
 
-      </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 gradient-text">About Me</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in-left">
+                    <div class="glass-effect rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-400">
+                            <i class="fas fa-user-graduate mr-2"></i>Professional Profile
+                        </h3>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            I hold the position of an IT Officer at IOE Purwanchal Campus Dharan, where I contribute my expertise 
+                            in the field of Electronics, Communication, and Information Engineering. My passion lies in robotics, 
+                            IoT development, and cutting-edge technology solutions.
+                        </p>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Currently, I also serve as the Head of PR and Marketing at Pi Innovation Pvt. Ltd., where I actively 
+                            engage in promoting innovative technological solutions and positioning our brand in the competitive market.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-slate-700 p-4 rounded-lg">
+                                <div class="text-blue-400 font-semibold">Location</div>
+                                <div class="text-gray-300">Dharan, Nepal</div>
+                            </div>
+                            <div class="bg-slate-700 p-4 rounded-lg">
+                                <div class="text-blue-400 font-semibold">Experience</div>
+                                <div class="text-gray-300">5+ Years</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <a href="#experience" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full transition-all duration-300">
+                                View Experience
+                            </a>
+                            <a href="#skills" class="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-full transition-all duration-300">
+                                My Skills
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in-right">
+                    <div class="glass-effect rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-400">
+                            <i class="fas fa-file-alt mr-2"></i>Research Publications
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-blue-600 pl-4 hover:bg-slate-700 p-4 rounded-r-lg transition-all duration-300">
+                                <h4 class="font-semibold text-white mb-2">Two-Wheeled Self-Balancing Robot</h4>
+                                <p class="text-gray-400 text-sm mb-2">
+                                    Analytical and Experimental Approach for Modeling, Simulation and Validation
+                                </p>
+                                <div class="text-blue-400 text-sm">
+                                    <i class="fas fa-users mr-1"></i>G Baskota, R Devkota, S Paneru - 2023 ICICT, IEEE
+                                </div>
+                            </div>
+                            
+                            <div class="border-l-4 border-purple-600 pl-4 hover:bg-slate-700 p-4 rounded-r-lg transition-all duration-300">
+                                <h4 class="font-semibold text-white mb-2">Mobile Robot VSLAM</h4>
+                                <p class="text-gray-400 text-sm mb-2">
+                                    Mapping and Localization of Mobile Robot with Monocular Camera Using VSLAM
+                                </p>
+                                <div class="text-purple-400 text-sm">
+                                    <i class="fas fa-users mr-1"></i>S Paneru, S Yadav - 2023 ICT, ICTAES
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-slate-600">
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-chart-line mr-2 text-blue-400"></i>
+                                <span>Contributing to robotics and AI research community</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 gradient-text">Skills & Expertise</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Technical skills and expertise developed through academic study and professional experience
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
+                    <div class="text-3xl text-blue-400 mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Programming</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>Python</span>
+                            <div class="w-24 bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>C/C++</span>
+                            <div class="w-24 bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>JavaScript</span>
+                            <div class="w-24 bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-3/5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Robotics & IoT -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="text-3xl text-purple-400 mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Robotics & IoT</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Arduino/ESP32</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Raspberry Pi</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>ROS (Robot Operating System)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>SLAM & Navigation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Electronics -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="text-3xl text-yellow-400 mb-4">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Electronics</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Circuit Design</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>PCB Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Embedded Systems</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Signal Processing</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Sensor Integration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Communication -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="text-3xl text-green-400 mb-4">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Communication</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Wireless Networks</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>IoT Protocols</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Network Configuration</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Data Transmission</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Software Tools -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="text-3xl text-red-400 mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Software Tools</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>MATLAB/Simulink</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>CAD Design</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Git Version Control</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Linux/Ubuntu</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Management -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="text-3xl text-indigo-400 mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Leadership</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Team Management</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Project Coordination</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Marketing Strategy</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Technical Writing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 gradient-text">Education</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-600 hidden md:block"></div>
+                
+                <div class="space-y-12">
+                    <!-- Bachelor's Degree -->
+                    <div class="flex flex-col md:flex-row items-center animate-fade-in-left">
+                        <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                            <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                                <div class="flex items-start">
+                                    <img src="/api/placeholder/80/80" alt="IOE Purwanchal Campus" class="w-16 h-16 rounded-lg mr-4 bg-slate-700">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-blue-400 mb-2">
+                                            Bachelor of Engineering
+                                        </h3>
+                                        <p class="text-gray-300 mb-2">Electronics, Communication and Information</p>
+                                        <p class="text-blue-300 mb-2">IOE Purwanchal Campus</p>
+                                        <p class="text-gray-400 mb-3">Dharan, Nepal</p>
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-calendar mr-2"></i>
+                                            <span>2019 - 2023</span>
+                                        </div>
+                                        <div class="flex items-center text-sm text-green-400 mt-2">
+                                            <i class="fas fa-graduation-cap mr-2"></i>
+                                            <span>Graduated with Distinction</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-4 h-4 bg-blue-600 rounded-full relative z-10"></div>
+                        <div class="md:w-1/2 md:pl-8"></div>
+                    </div>
+                    
+                    <!-- Diploma -->
+                    <div class="flex flex-col md:flex-row items-center animate-fade-in-right">
+                        <div class="md:w-1/2 md:pr-8"></div>
+                        <div class="hidden md:block w-4 h-4 bg-purple-600 rounded-full relative z-10"></div>
+                        <div class="md:w-1/2 md:pl-8 mb-8 md:mb-0">
+                            <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                                <div class="flex items-start">
+                                    <img src="/api/placeholder/80/80" alt="Mahendra Namuna School" class="w-16 h-16 rounded-lg mr-4 bg-slate-700">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-purple-400 mb-2">
+                                            Sub Engineering Diploma
+                                        </h3>
+                                        <p class="text-gray-300 mb-2">Civil Engineering</p>
+                                        <p class="text-purple-300 mb-2">Shree Mahendra Namuna Secondary School</p>
+                                        <p class="text-gray-400 mb-3">Nepal Engineering Board (NEB)</p>
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-calendar mr-2"></i>
+                                            <span>2014 - 2018</span>
+                                        </div>
+                                        <div class="flex items-center text-sm text-green-400 mt-2">
+                                            <i class="fas fa-certificate mr-2"></i>
+                                            <span>Completed Successfully</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 gradient-text">Projects Made</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Innovative projects showcasing my expertise in robotics, electronics, and software development
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Two-Wheeled Self-Balancing Robot -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
+                     onclick="openProjectModal('project1')">
+                    <div class="text-4xl text-blue-400 mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">Self-Balancing Robot</h3>
+                    <p class="text-gray-300 mb-4">Two-wheeled autonomous robot with advanced balancing algorithms and real-time control systems.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Arduino</span>
+                        <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">IMU Sensors</span>
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">PID Control</span>
+                    </div>
+                    <div class="flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                        <span class="mr-2">View Details</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- VSLAM Mobile Robot -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
+                     onclick="openProjectModal('project2')" style="animation-delay: 0.1s;">
+                    <div class="text-4xl text-purple-400 mb-4">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-purple-400">VSLAM Navigation Robot</h3>
+                    <p class="text-gray-300 mb-4">Mobile robot with visual SLAM for mapping and localization using monocular camera system.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">OpenCV</span>
+                        <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">ROS</span>
+                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">SLAM</span>
+                    </div>
+                    <div class="flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300">
+                        <span class="mr-2">View Details</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- IoT Smart Home System -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
+                     onclick="openProjectModal('project3')" style="animation-delay: 0.2s;">
+                    <div class="text-4xl text-green-400 mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-green-400">IoT Smart Home System</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive home automation system with sensor integration and mobile app control.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">ESP32</span>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">IoT</span>
+                        <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Mobile App</span>
+                    </div>
+                    <div class="flex items-center text-green-400 hover:text-green-300 transition-colors duration-300">
+                        <span class="mr-2">View Details</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Wireless Sensor Network -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
+                     onclick="openProjectModal('project4')" style="animation-delay: 0.3s;">
+                    <div class="text-4xl text-yellow-400 mb-4">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Wireless Sensor Network</h3>
+                    <p class="text-gray-300 mb-4">Multi-node sensor network for environmental monitoring with data visualization dashboard.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">LoRa</span>
+                        <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-sm">Sensors</span>
+                        <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">Dashboard</span>
+                    </div>
+                    <div class="flex items-center text-yellow-400 hover:text-yellow-300 transition-colors duration-300">
+                        <span class="mr-2">View Details</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- PCB Design Projects -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
+                     onclick="openProjectModal('project5')" style="animation-delay: 0.4s;">
+                    <div class="text-4xl text-red-400 mb-4">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-red-400">Custom PCB Designs</h3>
+                    <p class="text-gray-300 mb-4">Various custom PCB designs for embedded systems, sensors, and control circuits.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">KiCad</span>
+                        <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm">Electronics</span>
+                        <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Hardware</span>
+                    </div>
+                    <div class="flex items-center text-red-400 hover:text-red-300 transition-colors duration-300">
+                        <span class="mr-2">View Details</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Campus Management System -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
+                     onclick="openProjectModal('project6')" style="animation-delay: 0.5s;">
+                    <div class="text-4xl text-indigo-400 mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-indigo-400">Campus Management System</h3>
+                    <p class="text-gray-300 mb-4">Digital platform for academic administration, student records, and campus resource management.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">Web App</span>
+                        <span class="bg-violet-600 text-white px-3 py-1 rounded-full text-sm">Database</span>
+                        <span class="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">Admin Panel</span>
+                    </div>
+                    <div class="flex items-center text-indigo-400 hover:text-indigo-300 transition-colors duration-300">
+                        <span class="mr-2">View Details</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="glass-effect rounded-2xl max-w-4xl w-full max-h-96 overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <h2 id="modalTitle" class="text-3xl font-bold gradient-text"></h2>
+                    <button onclick="closeProjectModal()" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="modalContent" class="text-gray-300 leading-relaxed"></div>
+            </div>
+        </div>
     </div>
-  </section>
-  <!-- about section ends -->
 
-  <!-- skills section starts -->
-  <section class="skills" id="skills">
-
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
-
-    <div class="container">
-      <div class="row" id="skillsContainer">
-
-      </div>
-    </div>
-  </section>
-  <!-- skills section ends -->
-
-
-  <!-- education section starts -->
-  <section class="education" id="education">
-
-    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-    <div class="box-container">
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="purwanchal campus.png" alt="">
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 gradient-text">Professional Experience</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    My journey through various roles in engineering, technology, and leadership
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Current Position -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:translateX-2 transition-all duration-300 animate-fade-in-left">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-400 mb-2">IT Officer</h3>
+                            <h4 class="text-xl text-purple-400 mb-2">IOE Purwanchal Campus</h4>
+                            <p class="text-gray-400">Currently managing IT infrastructure and supporting academic technology needs</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-green-600 text-white px-4 py-2 rounded-full text-sm mb-2">
+                                Current Position
+                            </div>
+                            <div class="text-gray-400">May 2023 - Present</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-600 pt-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">System Administration</span>
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Network Management</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Technical Support</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Robotics Club Coordinator -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:translateX-2 transition-all duration-300 animate-fade-in-left" style="animation-delay: 0.1s;">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-400 mb-2">Coordinator</h3>
+                            <h4 class="text-xl text-purple-400 mb-2">Robotics Club IOE Purwanchal Campus</h4>
+                            <p class="text-gray-400">Led robotics projects, organized workshops, and mentored students in robotics and automation</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-slate-600 text-white px-4 py-2 rounded-full text-sm mb-2">
+                                Leadership Role
+                            </div>
+                            <div class="text-gray-400">May 2022 - May 2023</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-600 pt-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">Team Leadership</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Project Management</span>
+                            <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">Robotics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Treasurer Role -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:translateX-2 transition-all duration-300 animate-fade-in-left" style="animation-delay: 0.2s;">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-400 mb-2">Treasurer</h3>
+                            <h4 class="text-xl text-purple-400 mb-2">Robotics Club IOE Purwanchal Campus</h4>
+                            <p class="text-gray-400">Managed club finances, budgets, and coordinated funding for robotics projects</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-slate-600 text-white px-4 py-2 rounded-full text-sm mb-2">
+                                Financial Management
+                            </div>
+                            <div class="text-gray-400">May 2021 - June 2022</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-600 pt-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Budget Management</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Financial Planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Executive Member -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:translateX-2 transition-all duration-300 animate-fade-in-left" style="animation-delay: 0.3s;">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-400 mb-2">Executive Member</h3>
+                            <h4 class="text-xl text-purple-400 mb-2">Robotics Club IOE Purwanchal Campus</h4>
+                            <p class="text-gray-400">Contributed to club activities, participated in robotics competitions, and supported technical projects</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-slate-600 text-white px-4 py-2 rounded-full text-sm mb-2">
+                                Active Member
+                            </div>
+                            <div class="text-gray-400">May 2020 - May 2021</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-600 pt-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Technical Projects</span>
+                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Competitions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Internship -->
+                <div class="glass-effect rounded-2xl p-6 hover:transform hover:translateX-2 transition-all duration-300 animate-fade-in-left" style="animation-delay: 0.4s;">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-400 mb-2">Sub-Engineering Intern</h3>
+                            <h4 class="text-xl text-purple-400 mb-2">Rural Village Water Resources Management Project (RVWRMP)</h4>
+                            <p class="text-gray-400">Gained practical engineering experience in water resource management and rural infrastructure development</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-slate-600 text-white px-4 py-2 rounded-full text-sm mb-2">
+                                Internship
+                            </div>
+                            <div class="text-gray-400">April 2018 - October 2018</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-600 pt-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-sm">Civil Engineering</span>
+                            <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm">Water Management</span>
+                            <span class="bg-lime-600 text-white px-3 py-1 rounded-full text-sm">Rural Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="content">
-          <p> <a href = "https://www.ioepc.edu.np/" target=”_blank”>
-            <h3>Bachelor of Engineering in Electronics, Communication and Information</h3></a>
-            <p>IOE Purwanchal Campus | Dharan, Nepal</p>
-            </p>
-          <h4>2019-2023 </h4>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 gradient-text">Get In Touch</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Let's discuss opportunities, collaborations, or just connect for a technical conversation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
+                    <div class="text-4xl text-blue-400 mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Email</h3>
+                    <a href="mailto:sadanand@ioepc.edu.np" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        sadanand@ioepc.edu.np
+                    </a>
+                </div>
+                
+                <div class="glass-effect rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="text-4xl text-green-400 mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Location</h3>
+                    <p class="text-gray-400">Dharan, Nepal</p>
+                </div>
+                
+                <div class="glass-effect rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up md:col-span-2 lg:col-span-1" style="animation-delay: 0.2s;">
+                    <div class="text-4xl text-purple-400 mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Work</h3>
+                    <p class="text-gray-400">Available for collaborations</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="flex justify-center gap-6">
+                    <a href="https://www.linkedin.com/in/sadanand-paneru-0114181b9/" target="_blank" 
+                       class="w-16 h-16 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/saddy1" target="_blank" 
+                       class="w-16 h-16 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Sadanand-Paneru" target="_blank" 
+                       class="w-16 h-16 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                        <i class="fab fa-researchgate text-2xl"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="mahendra namuna.jpg" alt="">
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 Sadanand Paneru. Designed with passion for technology and innovation.
+                </p>
+                <div class="mt-4 flex justify-center items-center text-sm text-gray-500">
+                    <i class="fas fa-heart text-red-500 mx-2"></i>
+                    <span>Made with dedication in Nepal</span>
+                </div>
+            </div>
         </div>
-        <div class="content">
-          <h3>Sub Engineering | Civil</h3>
-          <p>Shree Mahendra Namuna Secondary School| NEB</p>
-          <h4>2014-2018 </h4>
-        </div>
-      </div>
+    </footer>
 
-    </div>
-  </section>
-  <!-- education section ends -->
+    <!-- JavaScript -->
+    <script>
+        // Typing animation
+        const typingText = document.getElementById('typingText');
+        const texts = [
+            'Electronics Engineer',
+            'Robotics Enthusiast', 
+            'IoT Developer',
+            'IT Professional',
+            'Innovation Leader'
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
 
+        function typeText() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
 
-  <!-- work project section starts -->
-  <section class="work" id="work">
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
 
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+            const typingSpeed = isDeleting ? 100 : 150;
+            setTimeout(typeText, typingSpeed);
+        }
 
-    <div class="box-container">
+        // Start typing animation
+        typeText();
 
-    </div>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-effect');
+            } else {
+                navbar.classList.remove('glass-effect');
+            }
+        });
 
-    
-  </section>
-  <!-- work project section ends -->
+        // Scroll progress indicator
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
+        });
 
-  <!-- experience section starts -->
-  <section class="experience" id="experience">
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
-    <div class="timeline">
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>IOE Purwanchal Campus</h2>
-          </div>
-          <div class="desc">
-            <h3>IT Officer</h3>
-            <p>MAY 2023 - present</p>
-          </div>
-        </div>
-      </div>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
 
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Robotics Club IOE Purwanchal Campus</h2>
-          </div>
-          <div class="desc">
-            <h3>Coordinator</h3>
-            <p>MAY 2022 - MAY 2023</p>
-          </div>
-        </div>
-      </div>
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
 
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>Robotics Club IOE Purwanchal Campus</h2>
-          </div>
-          <div class="desc">
-            <h3>Treasurer</h3>
-            <p>May 2021 - June 2022</p>
-          </div>
-        </div>
-      </div>
+        // Add hover effects to cards
+        document.querySelectorAll('.glass-effect').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 20px 40px rgba(59, 130, 246, 0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
 
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Robotics Club IOE Purwanchal Campus</h2>
-          </div>
-          <div class="desc">
-            <h3>Executive Member</h3>
-            <p>MAY 2020 - May 2021</p>
-          </div>
-        </div>
-      </div>
+        // Particles effect for hero section (simple version)
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '2px';
+            particle.style.height = '2px';
+            particle.style.background = '#3b82f6';
+            particle.style.borderRadius = '50%';
+            particle.style.pointerEvents = 'none';
+            particle.style.opacity = '0.6';
+            
+            const hero = document.getElementById('home');
+            hero.appendChild(particle);
+            
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+            
+            particle.style.left = startX + 'px';
+            particle.style.top = startY + 'px';
+            
+            const animation = particle.animate([
+                { transform: 'translate(0, 0)', opacity: 0.6 },
+                { transform: `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200}px)`, opacity: 0 }
+            ], {
+                duration: 3000 + Math.random() * 2000,
+                easing: 'ease-out'
+            });
+            
+            animation.onfinish = () => particle.remove();
+        }
 
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>Rural Village Water Resources Management Project(RVWRMP)</h2>
-          </div>
-          <div class="desc">
-            <h3>Sub- Engineering | Internship</h3>
-            <p>April 2018 - OCT 2018</p>
-          </div>
-        </div>
-      </div>
+        // Create particles periodically
+        setInterval(createParticle, 300);
 
-      <!-- <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>WonderingBlog</h2>
-          </div>
-          <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
-          </div>
-        </div>
-      </div>
-    </div>  -->
+        // Project modal functionality
+        const projectData = {
+            project1: {
+                title: "Two-Wheeled Self-Balancing Robot",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-400 mb-4">Project Overview</h3>
+                            <p class="mb-4">Developed an autonomous two-wheeled self-balancing robot using advanced control algorithms and sensor fusion techniques. This project demonstrates expertise in robotics, control systems, and embedded programming.</p>
+                            
+                            <h4 class="text-lg font-semibold text-purple-400 mb-3">Key Features:</h4>
+                            <ul class="list-disc list-inside space-y-2 mb-4">
+                                <li>Real-time balance control using PID algorithms</li>
+                                <li>IMU sensor integration for orientation feedback</li>
+                                <li>Wireless control and monitoring capabilities</li>
+                                <li>Custom PCB design for compact electronics</li>
+                                <li>Mobile app for remote operation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-400 mb-3">Technical Specifications:</h4>
+                            <div class="bg-slate-700 p-4 rounded-lg mb-4">
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div><strong>Microcontroller:</strong> Arduino Mega</div>
+                                    <div><strong>Sensors:</strong> MPU6050 IMU</div>
+                                    <div><strong>Motors:</strong> DC Geared Motors</div>
+                                    <div><strong>Communication:</strong> Bluetooth/WiFi</div>
+                                    <div><strong>Power:</strong> Li-Po Battery</div>
+                                    <div><strong>Frame:</strong> Aluminum Chassis</div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-3">Research Publication:</h4>
+                            <p class="text-sm bg-slate-700 p-3 rounded-lg">
+                                "Analytical and Experimental Approach for Modeling, Simulation and Validation of Two-Wheeled Self-Balancing Robot" - Published in 2023 ICICT, IEEE
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            project2: {
+                title: "VSLAM Navigation Robot",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-purple-400 mb-4">Project Overview</h3>
+                            <p class="mb-4">Implemented Visual Simultaneous Localization and Mapping (VSLAM) system for mobile robot navigation using monocular camera. This project showcases advanced computer vision and robotics integration.</p>
+                            
+                            <h4 class="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
+                            <ul class="list-disc list-inside space-y-2 mb-4">
+                                <li>Real-time visual odometry and mapping</li>
+                                <li>Feature detection and tracking algorithms</li>
+                                <li>Loop closure detection for map consistency</li>
+                                <li>ROS-based architecture for modularity</li>
+                                <li>Path planning and autonomous navigation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-400 mb-3">Technical Implementation:</h4>
+                            <div class="bg-slate-700 p-4 rounded-lg mb-4">
+                                <div class="space-y-2 text-sm">
+                                    <div><strong>Platform:</strong> ROS (Robot Operating System)</div>
+                                    <div><strong>Vision Library:</strong> OpenCV</div>
+                                    <div><strong>SLAM Algorithm:</strong> ORB-SLAM2</div>
+                                    <div><strong>Camera:</strong> Monocular USB Camera</div>
+                                    <div><strong>Hardware:</strong> Raspberry Pi 4</div>
+                                    <div><strong>Programming:</strong> C++ and Python</div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-3">Research Publication:</h4>
+                            <p class="text-sm bg-slate-700 p-3 rounded-lg">
+                                "Mapping and Localization of Mobile Robot with Monocular Camera Using VSLAM" - Published in 2023 ICT, ICTAES
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            project3: {
+                title: "IoT Smart Home System",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-green-400 mb-4">Project Overview</h3>
+                            <p class="mb-4">Comprehensive smart home automation system integrating multiple IoT devices for intelligent control of lighting, security, climate, and energy management with mobile app interface.</p>
+                            
+                            <h4 class="text-lg font-semibold text-blue-400 mb-3">Features:</h4>
+                            <ul class="list-disc list-inside space-y-2 mb-4">
+                                <li>Voice-controlled home automation</li>
+                                <li>Energy monitoring and optimization</li>
+                                <li>Security system with camera integration</li>
+                                <li>Climate control and scheduling</li>
+                                <li>Remote monitoring via mobile app</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-purple-400 mb-3">System Architecture:</h4>
+                            <div class="bg-slate-700 p-4 rounded-lg mb-4">
+                                <div class="space-y-2 text-sm">
+                                    <div><strong>Central Hub:</strong> ESP32 with WiFi</div>
+                                    <div><strong>Sensors:</strong> Temperature, Motion, Light</div>
+                                    <div><strong>Actuators:</strong> Relays, Servo Motors</div>
+                                    <div><strong>Communication:</strong> MQTT Protocol</div>
+                                    <div><strong>Database:</strong> Firebase</div>
+                                    <div><strong>Mobile App:</strong> Flutter</div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-3">Impact:</h4>
+                            <p class="text-sm bg-slate-700 p-3 rounded-lg">
+                                Achieved 30% energy savings through intelligent automation and provided enhanced security with real-time monitoring capabilities.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            project4: {
+                title: "Wireless Sensor Network",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-yellow-400 mb-4">Project Overview</h3>
+                            <p class="mb-4">Multi-node wireless sensor network for environmental monitoring with long-range communication, data visualization dashboard, and predictive analytics for agricultural and industrial applications.</p>
+                            
+                            <h4 class="text-lg font-semibold text-blue-400 mb-3">Capabilities:</h4>
+                            <ul class="list-disc list-inside space-y-2 mb-4">
+                                <li>Multi-parameter environmental sensing</li>
+                                <li>Long-range LoRa communication</li>
+                                <li>Real-time data visualization</li>
+                                <li>Predictive analytics and alerts</li>
+                                <li>Solar-powered autonomous nodes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-400 mb-3">Technical Specifications:</h4>
+                            <div class="bg-slate-700 p-4 rounded-lg mb-4">
+                                <div class="space-y-2 text-sm">
+                                    <div><strong>Communication:</strong> LoRa 868MHz</div>
+                                    <div><strong>Range:</strong> Up to 10km</div>
+                                    <div><strong>Sensors:</strong> Temperature, Humidity, Soil</div>
+                                    <div><strong>Power:</strong> Solar + Battery</div>
+                                    <div><strong>Gateway:</strong> Raspberry Pi</div>
+                                    <div><strong>Dashboard:</strong> Web-based Interface</div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-purple-400 mb-3">Applications:</h4>
+                            <p class="text-sm bg-slate-700 p-3 rounded-lg">
+                                Successfully deployed for precision agriculture monitoring, helping farmers optimize irrigation and crop management.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            project5: {
+                title: "Custom PCB Designs",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-red-400 mb-4">Project Overview</h3>
+                            <p class="mb-4">Collection of custom PCB designs for various embedded systems, sensor interfaces, and control circuits with focus on miniaturization, reliability, and cost-effectiveness.</p>
+                            
+                            <h4 class="text-lg font-semibold text-blue-400 mb-3">Design Portfolio:</h4>
+                            <ul class="list-disc list-inside space-y-2 mb-4">
+                                <li>Microcontroller development boards</li>
+                                <li>Sensor interface circuits</li>
+                                <li>Power management modules</li>
+                                <li>Communication breakout boards</li>
+                                <li>Motor control circuits</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-400 mb-3">Design Tools & Process:</h4>
+                            <div class="bg-slate-700 p-4 rounded-lg mb-4">
+                                <div class="space-y-2 text-sm">
+                                    <div><strong>CAD Software:</strong> KiCad, Altium Designer</div>
+                                    <div><strong>Simulation:</strong> SPICE Analysis</div>
+                                    <div><strong>Manufacturing:</strong> Professional PCB Fab</div>
+                                    <div><strong>Testing:</strong> Automated Test Equipment</div>
+                                    <div><strong>Layers:</strong> 2-4 Layer Designs</div>
+                                    <div><strong>Features:</strong> SMD, Through-hole</div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-purple-400 mb-3">Quality Standards:</h4>
+                            <p class="text-sm bg-slate-700 p-3 rounded-lg">
+                                All designs follow IPC standards with comprehensive design rule checks and thermal analysis for reliable operation.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            project6: {
+                title: "Campus Management System",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-indigo-400 mb-4">Project Overview</h3>
+                            <p class="mb-4">Comprehensive digital platform for academic administration at IOE Purwanchal Campus, streamlining student records, faculty management, and resource allocation with modern web technologies.</p>
+                            
+                            <h4 class="text-lg font-semibold text-blue-400 mb-3">Core Modules:</h4>
+                            <ul class="list-disc list-inside space-y-2 mb-4">
+                                <li>Student information management</li>
+                                <li>Faculty and staff administration</li>
+                                <li>Course and curriculum management</li>
+                                <li>Examination and grading system</li>
+                                <li>Resource booking and allocation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-green-400 mb-3">Technical Stack:</h4>
+                            <div class="bg-slate-700 p-4 rounded-lg mb-4">
+                                <div class="space-y-2 text-sm">
+                                    <div><strong>Frontend:</strong> React.js, Tailwind CSS</div>
+                                    <div><strong>Backend:</strong> Node.js, Express</div>
+                                    <div><strong>Database:</strong> MongoDB</div>
+                                    <div><strong>Authentication:</strong> JWT, OAuth</div>
+                                    <div><strong>Hosting:</strong> Cloud Infrastructure</div>
+                                    <div><strong>Security:</strong> SSL, Data Encryption</div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-3">Impact:</h4>
+                            <p class="text-sm bg-slate-700 p-3 rounded-lg">
+                                Reduced administrative workload by 60% and improved data accuracy through automated processes and digital workflows.
+                            </p>
+                        </div>
+                    </div>
+                `
+            }
+        };
 
-    </div>
+        function openProjectModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+            
+            const project = projectData[projectId];
+            title.textContent = project.title;
+            content.innerHTML = project.content;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
 
-  </section>
-  <!-- experience section ends -->
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
 
+        // Close modal on outside click
+        document.getElementById('projectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProjectModal();
+            }
+        });
 
-  <!-- footer section starts -->
-  <section class="footer">
-    <h1 class="credit">Designed  By <a
-        href="https://github.com/saddy1"> Sadanand Paneru</a></h1>
-
-  </section>
-  <!-- footer section ends -->
-
-
-  <!-- scroll top btn -->
-  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-  <!-- scroll back to top -->
-
-
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-  <!-- jquery cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- typed.js cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
-    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- particle.js links -->
-  <script src="./assets/js/particles.min.js"></script>
-  <script src="./assets/js/app.js"></script>
-
-  <!-- vanilla tilt.js links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- scroll reveal anim -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-  <script src="./assets/js/script.js"></script>
-
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+            }
+        });
+    </script>
 </body>
-
 </html>
