@@ -252,7 +252,7 @@
                             </div>
                             <div class="bg-slate-700 p-4 rounded-lg">
                                 <div class="text-blue-400 font-semibold">Experience</div>
-                                <div class="text-gray-300">5+ Years</div>
+                                <div class="text-gray-300">2+ Years</div>
                             </div>
                         </div>
                         
@@ -506,7 +506,7 @@
                         <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
                             <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
                                 <div class="flex items-start">
-                                    <img src="/api/placeholder/80/80" alt="IOE Purwanchal Campus" class="w-16 h-16 rounded-lg mr-4 bg-slate-700">
+                                    <img src="purwanchal campus.png" alt="IOE Purwanchal Campus" class="w-16 h-16 rounded-lg mr-4 bg-slate-700">
                                     <div>
                                         <h3 class="text-xl font-bold text-blue-400 mb-2">
                                             Bachelor of Engineering
@@ -516,11 +516,11 @@
                                         <p class="text-gray-400 mb-3">Dharan, Nepal</p>
                                         <div class="flex items-center text-sm text-gray-500">
                                             <i class="fas fa-calendar mr-2"></i>
-                                            <span>2019 - 2023</span>
+                                            <span>2018 - 2023</span>
                                         </div>
                                         <div class="flex items-center text-sm text-green-400 mt-2">
                                             <i class="fas fa-graduation-cap mr-2"></i>
-                                            <span>Graduated with Distinction</span>
+                                            <span>Graduated with First Division</span>
                                         </div>
                                     </div>
                                 </div>
@@ -537,7 +537,7 @@
                         <div class="md:w-1/2 md:pl-8 mb-8 md:mb-0">
                             <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300">
                                 <div class="flex items-start">
-                                    <img src="/api/placeholder/80/80" alt="Mahendra Namuna School" class="w-16 h-16 rounded-lg mr-4 bg-slate-700">
+                                    <img src="mahendra namuna.jpg" alt="Mahendra Namuna School" class="w-16 h-16 rounded-lg mr-4 bg-slate-700">
                                     <div>
                                         <h3 class="text-xl font-bold text-purple-400 mb-2">
                                             Sub Engineering Diploma
@@ -624,7 +624,6 @@
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">ESP32</span>
                         <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">IoT</span>
-                        <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Mobile App</span>
                     </div>
                     <div class="flex items-center text-green-400 hover:text-green-300 transition-colors duration-300">
                         <span class="mr-2">View Details</span>
@@ -634,22 +633,26 @@
 
                 <!-- Wireless Sensor Network -->
                 <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
-                     onclick="openProjectModal('project4')" style="animation-delay: 0.3s;">
-                    <div class="text-4xl text-yellow-400 mb-4">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Wireless Sensor Network</h3>
-                    <p class="text-gray-300 mb-4">Multi-node sensor network for environmental monitoring with data visualization dashboard.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">LoRa</span>
-                        <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-sm">Sensors</span>
-                        <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">Dashboard</span>
-                    </div>
-                    <div class="flex items-center text-yellow-400 hover:text-yellow-300 transition-colors duration-300">
-                        <span class="mr-2">View Details</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
+     onclick="openProjectModal('project4')" style="animation-delay: 0.3s;">
+    <div class="text-4xl text-pink-400 mb-4">
+        <i class="fas fa-robot"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-3 text-pink-400">Robotic Arm</h3>
+    <p class="text-gray-300 mb-4">
+        A 6-DOF robotic arm powered by Raspberry Pi and Python camera module that detects and classifies fruits based on color using computer vision.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-4">
+        <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Raspberry Pi</span>
+        <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">OpenCV</span>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Python</span>
+        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">6 DOF</span>
+    </div>
+    <div class="flex items-center text-pink-400 hover:text-pink-300 transition-colors duration-300">
+        <span class="mr-2">View Details</span>
+        <i class="fas fa-arrow-right"></i>
+    </div>
+</div>
+
 
                 <!-- PCB Design Projects -->
                 <div class="glass-effect rounded-2xl p-6 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer animate-fade-in-up project-card" 
@@ -1176,44 +1179,47 @@
                     </div>
                 `
             },
-            project4: {
-                title: "Wireless Sensor Network",
-                content: `
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="text-xl font-semibold text-yellow-400 mb-4">Project Overview</h3>
-                            <p class="mb-4">Multi-node wireless sensor network for environmental monitoring with long-range communication, data visualization dashboard, and predictive analytics for agricultural and industrial applications.</p>
-                            
-                            <h4 class="text-lg font-semibold text-blue-400 mb-3">Capabilities:</h4>
-                            <ul class="list-disc list-inside space-y-2 mb-4">
-                                <li>Multi-parameter environmental sensing</li>
-                                <li>Long-range LoRa communication</li>
-                                <li>Real-time data visualization</li>
-                                <li>Predictive analytics and alerts</li>
-                                <li>Solar-powered autonomous nodes</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold text-green-400 mb-3">Technical Specifications:</h4>
-                            <div class="bg-slate-700 p-4 rounded-lg mb-4">
-                                <div class="space-y-2 text-sm">
-                                    <div><strong>Communication:</strong> LoRa 868MHz</div>
-                                    <div><strong>Range:</strong> Up to 10km</div>
-                                    <div><strong>Sensors:</strong> Temperature, Humidity, Soil</div>
-                                    <div><strong>Power:</strong> Solar + Battery</div>
-                                    <div><strong>Gateway:</strong> Raspberry Pi</div>
-                                    <div><strong>Dashboard:</strong> Web-based Interface</div>
-                                </div>
-                            </div>
-                            
-                            <h4 class="text-lg font-semibold text-purple-400 mb-3">Applications:</h4>
-                            <p class="text-sm bg-slate-700 p-3 rounded-lg">
-                                Successfully deployed for precision agriculture monitoring, helping farmers optimize irrigation and crop management.
-                            </p>
-                        </div>
+         project4: {
+    title: "Robotic Arm with Fruit Classification",
+    content: `
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <h3 class="text-xl font-semibold text-pink-400 mb-4">Project Overview</h3>
+                <p class="mb-4">
+                    A 6-degree-of-freedom robotic arm powered by Raspberry Pi and a Python-based camera module. It identifies and classifies fruits based on their color using computer vision, enabling automation in sorting and handling tasks.
+                </p>
+
+                <h4 class="text-lg font-semibold text-blue-400 mb-3">Capabilities:</h4>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li>6 DOF for complex arm movement</li>
+                    <li>Real-time fruit classification based on color</li>
+                    <li>Python and OpenCV for image processing</li>
+                    <li>Precision servo motor control</li>
+                    <li>Autonomous picking and sorting logic</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-green-400 mb-3">Technical Specifications:</h4>
+                <div class="bg-slate-700 p-4 rounded-lg mb-4">
+                    <div class="space-y-2 text-sm">
+                        <div><strong>Controller:</strong> Raspberry Pi 4</div>
+                        <div><strong>Camera:</strong> Pi Camera Module v2</div>
+                        <div><strong>Motion:</strong> 6 Servo Motors</div>
+                        <div><strong>Processing:</strong> Python + OpenCV</div>
+                        <div><strong>Power:</strong> 5V Power Supply</div>
+                        <div><strong>Control:</strong> Autonomous or Manual via GUI</div>
                     </div>
-                `
-            },
+                </div>
+
+                <h4 class="text-lg font-semibold text-purple-400 mb-3">Applications:</h4>
+                <p class="text-sm bg-slate-700 p-3 rounded-lg">
+                    Ideal for smart agriculture and packaging industries to automate fruit sorting and reduce manual labor using low-cost embedded systems.
+                </p>
+            </div>
+        </div>
+    `
+},
+
             project5: {
                 title: "Custom PCB Designs",
                 content: `
