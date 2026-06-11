@@ -3,7 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sadanand Paneru — Electronics & Robotics Engineer</title>
+  <title>Sadanand Paneru | Electronics Engineer, IT Officer & Web Developer — Dharan, Nepal</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Sadanand Paneru — Electronics & Robotics Engineer, IT Officer at IOE Purwanchal Campus Dharan, and CEO of Broad Tech Infosys. IEEE-published researcher in robotics and SLAM navigation. Specialises in embedded systems, IoT, campus IT infrastructure, and web development in Nepal.">
+  <meta name="keywords" content="Sadanand Paneru, Electronics Engineer Nepal, Robotics Engineer Dharan, IT Officer IOE Purwanchal Campus, Web Developer Nepal, SLAM Robotics Nepal, IoT Developer Nepal, Embedded Systems Engineer Nepal, CEO Broad Tech Infosys, IT Expert Dharan, Campus Management System Nepal, EMIS Nepal, Tribhuvan University IT">
+  <meta name="author" content="Sadanand Paneru">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sadanandpaneru.com.np/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sadanandpaneru.com.np/">
+  <meta property="og:title" content="Sadanand Paneru | Electronics Engineer, IT Officer & Web Developer — Nepal">
+  <meta property="og:description" content="Electronics & Robotics Engineer, IT Officer at IOE Purwanchal Campus, CEO of Broad Tech Infosys. IEEE-published researcher. Embedded systems, campus IT infrastructure, and web development.">
+  <meta property="og:image" content="https://sadanandpaneru.com.np/Sadanand-Paneru.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Sadanand Paneru">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sadanand Paneru | Electronics Engineer & IT Officer — Nepal">
+  <meta name="twitter:description" content="Electronics & Robotics Engineer, IT Officer at IOE Purwanchal Campus, CEO of Broad Tech Infosys. IEEE-published researcher in SLAM and robotics.">
+  <meta name="twitter:image" content="https://sadanandpaneru.com.np/Sadanand-Paneru.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sadanand Paneru",
+    "url": "https://sadanandpaneru.com.np",
+    "image": "https://sadanandpaneru.com.np/Sadanand-Paneru.jpg",
+    "jobTitle": "IT Officer & Electronics Engineer",
+    "description": "Electronics & Robotics Engineer and IT Officer at IOE Purwanchal Campus, Dharan, Nepal. IEEE-published researcher. CEO of Broad Tech Infosys Pvt. Ltd.",
+    "email": "sadanand@ioepc.edu.np",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dharan",
+      "addressRegion": "Sunsari",
+      "addressCountry": "NP"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "IOE Purwanchal Campus, Tribhuvan University"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "IOE Purwanchal Campus"
+    },
+    "knowsAbout": ["Robotics", "SLAM Navigation", "Embedded Systems", "IoT", "Electronics Engineering", "IT Infrastructure", "Web Development", "Computer Vision", "PCB Design"],
+    "sameAs": [
+      "https://www.linkedin.com/in/sadanand-paneru-0114181b9/",
+      "https://github.com/saddy1",
+      "https://www.researchgate.net/profile/Sadanand-Paneru"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -692,6 +749,51 @@
     }
     footer p { font-size: 0.88rem; color: var(--text-light); }
 
+    /* ── EMIS Section ── */
+    .emis-groups { display: flex; flex-direction: column; gap: 40px; }
+    .emis-group-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .emis-group-label i { color: var(--accent); }
+    .emis-cards { display: flex; flex-direction: column; gap: 12px; }
+    .emis-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .emis-card:hover { box-shadow: var(--shadow); border-color: #bfdbfe; }
+    .emis-num {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--accent-bg);
+      border: 1px solid #bfdbfe;
+      padding: 4px 8px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      min-width: 36px;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .emis-title { font-weight: 700; color: var(--text); margin-bottom: 5px; font-size: 0.95rem; }
+    .emis-desc { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+
     /* ── Animations ── */
     .fade-up {
       opacity: 0;
@@ -729,6 +831,8 @@
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#emis">Campus IT</a></li>
+      <li><a href="#webdev">Web Dev</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact" class="nav-contact-btn">Contact</a></li>
@@ -743,6 +847,8 @@
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
+  <a href="#emis">Campus IT</a>
+  <a href="#webdev">Web Dev</a>
   <a href="#skills">Skills</a>
   <a href="#education">Education</a>
   <a href="#contact">Contact</a>
@@ -884,15 +990,15 @@
           <span class="timeline-date current">May 2023 – Present</span>
         </div>
         <p class="timeline-desc">
-          Responsible for all aspects of IT at IOE Purwanchal Campus — from day-to-day helpdesk support to long-term network planning. The campus serves a few thousand students and faculty, so reliability is non-negotiable.
+          Responsible for all aspects of IT at IOE Purwanchal Campus — from day-to-day helpdesk to long-term infrastructure and software development. Leading the EMIS (Education Management Information System) programme to digitise the entire campus operation across 15+ systems.
         </p>
         <ul class="timeline-bullets">
-          <li>Manage and maintain campus LAN/WAN infrastructure, including switches, routers, and wireless access points across multiple buildings</li>
-          <li>Administer Linux-based servers handling student portals, internal applications, and data storage</li>
-          <li>Lead digitization efforts for administrative processes, reducing paper-based workflows in student registration and exam management</li>
-          <li>Provide technical training and support to faculty for classroom technology, projectors, and learning management systems</li>
-          <li>Coordinate with vendors for hardware procurement, maintenance contracts, and software licensing</li>
-          <li>Ensure campus cybersecurity posture — firewall management, user policy enforcement, and periodic audits</li>
+          <li>Architecting and delivering a campus-wide EMIS covering admissions, exams, hostels, library, store, clearance, and more — <a href="#emis" style="color:var(--accent)">see full system list below</a></li>
+          <li>Manage and maintain campus LAN/WAN infrastructure — switches, routers, VLANs, and wireless access points across all academic blocks</li>
+          <li>Administer Linux-based servers (virtualisation hosts, application servers, database and backup nodes) under a centralised management layer</li>
+          <li>Register and manage domains, provision virtual servers, deploy web applications, and host student and departmental sites</li>
+          <li>Provide technical support and training to faculty for classroom technology, LMS, and digital workflows</li>
+          <li>Oversee cybersecurity posture — firewall policy, user access control, and periodic security audits</li>
         </ul>
         <div class="tags">
           <span class="tag">Network Administration</span>
@@ -1170,6 +1276,286 @@
           <div class="project-link">Details <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EMIS & Campus Systems ── -->
+<section id="emis" class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Institutional IT</div>
+      <h2 class="section-title">EMIS — IOE Purwanchal Campus</h2>
+      <p class="section-desc">As IT Officer at IOE Purwanchal Campus (Tribhuvan University), I have designed and developed a comprehensive Education Management Information System to digitise every major administrative and academic workflow. Below are the 15 systems built and deployed in-house.</p>
+    </div>
+
+    <div class="emis-groups">
+
+      <!-- Group: Student Services -->
+      <div class="emis-group fade-up">
+        <div class="emis-group-label"><i class="fas fa-user-graduate"></i> Student Services</div>
+        <div class="emis-cards">
+          <div class="emis-card">
+            <div class="emis-num">07</div>
+            <div>
+              <div class="emis-title">Online Admission Portal</div>
+              <div class="emis-desc">Prospective students fill the admission form, upload documents, and pay the application fee entirely online. Verified applications feed directly into the admissions queue — no redundant data entry, no campus visit required for submission.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">05</div>
+            <div>
+              <div class="emis-title">Voucher / Token Submission & Auto-Validation</div>
+              <div class="emis-desc">Students upload their bank voucher or token number through their account. The backend validates the payment against bank records automatically and posts the confirmed token to the finance system — eliminating fee-submission queues and providing a clean audit trail.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">04</div>
+            <div>
+              <div class="emis-title">Hostel Allocation System (Dynamic Rank-Based)</div>
+              <div class="emis-desc">Students fill a single application form and the system ranks each applicant dynamically using the campus criteria — academic merit, distance from home, gender quota, and special categories. Seats are allocated from the ranked list transparently, removing manual preparation and disputes.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">03</div>
+            <div>
+              <div class="emis-title">Automatic Clearance Form Generation</div>
+              <div class="emis-desc">On a clearance request, the system queries every relevant section — library, hostel, store, finance, and departments — and assembles the form with each section's live status. Pending dues are flagged; signing officers only verify and approve.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">02</div>
+            <div>
+              <div class="emis-title">Certificate Generation & Graduate Tracking</div>
+              <div class="emis-desc">On-request generation of campus certificates (character, transcript, provisional, migration) directly from the student records. Graduated students are tracked longitudinally — employment, further studies, contact — building an alumni database for outcome reporting and accreditation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: Academic Management -->
+      <div class="emis-group fade-up">
+        <div class="emis-group-label"><i class="fas fa-chalkboard-teacher"></i> Academic Management</div>
+        <div class="emis-cards">
+          <div class="emis-card">
+            <div class="emis-num">11</div>
+            <div>
+              <div class="emis-title">Exam Management with Auto Seat-Planning</div>
+              <div class="emis-desc">Takes subject / room / candidate list as input and automatically generates the full seat plan and invigilator assignments, factoring in room capacity, attendance, and faculty availability. Produces all official letters — invigilation duties, room allotments, candidate lists, seating charts — ready for signature. Reduced exam planning from days to minutes.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">14</div>
+            <div>
+              <div class="emis-title">Routine Management & Teaching-Tracking Portal</div>
+              <div class="emis-desc">Campus Chief, Vice Chief, and section heads log in and flag each scheduled class as Taught or Not Taught. Teachers record attendance on the same day — no back-dated entries permitted. Supports one-click download of master, department-wise, individual teacher, and personal routines.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">17</div>
+            <div>
+              <div class="emis-title">Marksheet Aggregation & Performance Audit System</div>
+              <div class="emis-desc">Ingests all student marksheets and segregates them by batch, faculty, programme, semester, and subject. Generates audit reports — subject-wise pass/fail rates, mark distributions, top and bottom performers, and cross-batch trend lines — used for academic review and accreditation evidence.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">13</div>
+            <div>
+              <div class="emis-title">Canva for Educator — Free PRO Access</div>
+              <div class="emis-desc">Provisioned Canva for Education (Educator) access campus-wide, enabling all students and staff to use Canva PRO features — design tools for coursework, presentations, reports, and departmental material — at no individual cost.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: IT Infrastructure -->
+      <div class="emis-group fade-up">
+        <div class="emis-group-label"><i class="fas fa-server"></i> IT Infrastructure</div>
+        <div class="emis-cards">
+          <div class="emis-card">
+            <div class="emis-num">06</div>
+            <div>
+              <div class="emis-title">Centralised Campus Networking</div>
+              <div class="emis-desc">Campus-wide network placing every academic block, lab, and administrative section on a unified managed network with consistent IP planning, VLAN segmentation, and central monitoring. Forms the backbone for all other EMIS systems.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">10</div>
+            <div>
+              <div class="emis-title">Centralised Server Management</div>
+              <div class="emis-desc">A unified administration layer for all campus servers — virtualisation hosts, application servers, database servers, storage and backup nodes — with a single pane for monitoring, patching, backup verification, and access control. The EMIS Cell registers domains, provisions virtual servers, deploys web applications, and hosts student and departmental sites.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">18</div>
+            <div>
+              <div class="emis-title">GPU Resource Allocation System (Time-Shared)</div>
+              <div class="emis-desc">Scheduling and remote-access platform letting students and researchers reserve GPU time on campus compute servers on a time-sharing basis. Includes queuing, usage logs, and quota controls — supporting AI/ML coursework, final-year projects, and faculty research.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: Library & Knowledge -->
+      <div class="emis-group fade-up">
+        <div class="emis-group-label"><i class="fas fa-book"></i> Library & Knowledge Management</div>
+        <div class="emis-cards">
+          <div class="emis-card">
+            <div class="emis-num">15</div>
+            <div>
+              <div class="emis-title">Library Migration — Luniva to KOHA</div>
+              <div class="emis-desc">Full migration of the campus library from the legacy Luniva system to KOHA (open-source ILS), including OPAC customisation — branding, search, faceting — circulation rules, patron categories, item types, and MARC frameworks. Students and faculty get a modern, searchable, mobile-friendly catalogue with reservation and self-service. Maintained in-house with regular updates, database backups, and performance tuning.</div>
+            </div>
+          </div>
+          <div class="emis-card">
+            <div class="emis-num">16</div>
+            <div>
+              <div class="emis-title">Private DSpace Repository (E-Library)</div>
+              <div class="emis-desc">A private DSpace digital repository for e-library resources, theses, project reports, faculty publications, and lecture material. Access is role-controlled — internal-only content stays within the campus network; open content is publicly accessible.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: Admin & Store -->
+      <div class="emis-group fade-up">
+        <div class="emis-group-label"><i class="fas fa-boxes"></i> Administration & Store</div>
+        <div class="emis-cards">
+          <div class="emis-card">
+            <div class="emis-num">08</div>
+            <div>
+              <div class="emis-title">Store Management System</div>
+              <div class="emis-desc">Full lifecycle management of every store item — purchase order generation, goods-received entry, stock keeping, issue/store-out transactions, and disposal. Dashboard analytics cover consumption trends, low-stock alerts, department-wise utilisation, and vendor performance for the store keeper and administration.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Web Development ── -->
+<section id="webdev" class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Client Work</div>
+      <h2 class="section-title">Web Development Projects</h2>
+      <p class="section-desc">Websites and web applications built for businesses, schools, and colleges across Nepal — from corporate portals to institutional e-commerce platforms.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card fade-up">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-building"></i></div>
+          <div><div class="project-badge">Company Website · CEO</div></div>
+        </div>
+        <div class="project-title">Broad Tech Infosys Pvt. Ltd.</div>
+        <div class="project-desc">
+          Official website for my own technology company — Broad Tech Infosys. Covers the company's IT services, software development offerings, and client portfolio. Built for performance, clean design, and lead generation.
+        </div>
+        <div class="tags" style="margin-bottom:16px">
+          <span class="tag">Corporate Site</span>
+          <span class="tag">IT Services</span>
+          <span class="tag">Nepal</span>
+        </div>
+        <div class="project-card-footer">
+          <div></div>
+          <a href="https://broadtechinfosys.com.np/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Visit Site <i class="fas fa-external-link-alt" style="font-size:0.72rem"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-laptop"></i></div>
+          <div><div class="project-badge">E-Commerce · Electronics Retail</div></div>
+        </div>
+        <div class="project-title">EG Tech Solution</div>
+        <div class="project-desc">
+          Online presence for EG Tech Solution, a trusted electronics and tech products retailer based in Dhangadhi, Kailali, Nepal. The site showcases their product range — laptops, printers, peripherals, audio, and accessories — with a focus on competitive pricing and easy browsing.
+        </div>
+        <div class="tags" style="margin-bottom:16px">
+          <span class="tag">E-Commerce</span>
+          <span class="tag">Electronics</span>
+          <span class="tag">Dhangadhi, Kailali</span>
+        </div>
+        <div class="project-card-footer">
+          <div></div>
+          <a href="https://www.egtechsolution.com.np/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Visit Site <i class="fas fa-external-link-alt" style="font-size:0.72rem"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-university"></i></div>
+          <div><div class="project-badge">College Website</div></div>
+        </div>
+        <div class="project-title">Godawari College, Itahari</div>
+        <div class="project-desc">
+          Official website for Godawari College in Itahari, Sunsari — a Tribhuvan University-affiliated institution offering B.Sc. CSIT and BBS programmes. Features course information, notice board, online inquiry, photo gallery, and an integrated AI assistant for prospective students.
+        </div>
+        <div class="tags" style="margin-bottom:16px">
+          <span class="tag">Education Portal</span>
+          <span class="tag">Itahari, Sunsari</span>
+          <span class="tag">TU Affiliated</span>
+        </div>
+        <div class="project-card-footer">
+          <div></div>
+          <a href="https://godawari.edu.np/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Visit Site <i class="fas fa-external-link-alt" style="font-size:0.72rem"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-school"></i></div>
+          <div><div class="project-badge">School Website</div></div>
+        </div>
+        <div class="project-title">Barchhain Secondary School</div>
+        <div class="project-desc">
+          Institutional website for Barchhain Secondary School, Nepal. Provides students, parents, and staff with easy access to school information, notices, academic updates, and contact details — built with a clean, mobile-friendly design.
+        </div>
+        <div class="tags" style="margin-bottom:16px">
+          <span class="tag">School Website</span>
+          <span class="tag">Nepal</span>
+          <span class="tag">edu.np</span>
+        </div>
+        <div class="project-card-footer">
+          <div></div>
+          <a href="https://barchhainsecondary.edu.np/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Visit Site <i class="fas fa-external-link-alt" style="font-size:0.72rem"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-school"></i></div>
+          <div><div class="project-badge">School Website</div></div>
+        </div>
+        <div class="project-title">Sushma Secondary School</div>
+        <div class="project-desc">
+          Official website for Sushma Secondary School, Nepal. Delivers essential school information, academic notices, staff details, and contact information in a structured, accessible format for students and guardians.
+        </div>
+        <div class="tags" style="margin-bottom:16px">
+          <span class="tag">School Website</span>
+          <span class="tag">Nepal</span>
+          <span class="tag">edu.np</span>
+        </div>
+        <div class="project-card-footer">
+          <div></div>
+          <a href="https://sushmasecondary.edu.np/" target="_blank" rel="noopener noreferrer" class="project-link">
+            Visit Site <i class="fas fa-external-link-alt" style="font-size:0.72rem"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
